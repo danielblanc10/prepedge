@@ -53,7 +53,7 @@ function Sidebar({ active, setActive }) {
         ))}
       </nav>
       <div className="sidebar-footer">
-        <div className="footer-count">{QUESTIONS.length} questions</div>
+        <div className="footer-count">100+ questions</div>
       </div>
     </div>
   )
@@ -71,8 +71,8 @@ function HomePage({ setActiveMode }) {
         <div className="hero-eyebrow">Préparation entretiens IB & PE</div>
         <h1 className="hero-title">Maîtrise chaque<br />question d'entretien.</h1>
         <p className="hero-sub">
-          {QUESTIONS.length} flashcards techniques et fit, issues de cours, de guides de référence,
-          et de comptes rendus d'entretiens réels (UBS, Stifel, Clairfield, Oaklins).
+          100+ flashcards techniques et fit, issues de cours, de guides de référence,
+          et de comptes rendus d'entretiens réels (Bulge-bruckets, Elite Boutiques).
         </p>
         <div className="hero-actions">
           <button className="btn-primary" onClick={() => setActiveMode("flash")}>
@@ -87,7 +87,7 @@ function HomePage({ setActiveMode }) {
 
       <div className="home-stats-row">
         <div className="home-stat">
-          <div className="home-stat-num">{QUESTIONS.length}</div>
+          <div className="home-stat-num">100+</div>
           <div className="home-stat-label">Questions</div>
         </div>
         <div className="home-stat">
