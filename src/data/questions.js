@@ -283,7 +283,131 @@ export const QUESTIONS = [
     id: "adv_002", cat: "LBO", difficulty: "avancé",
     q: "Qu'est-ce qu'un management package dans un LBO ? Comment fonctionne-t-il ?",
     a: "Le management package est le mécanisme d'intéressement au capital réservé aux dirigeants clés. Son but est d'aligner les intérêts du management avec ceux du fonds.\n\nMécanisme :\nLe management investit une somme symbolique (1 à 3 ans de salaire) en actions ordinaires (sweet equity). Le fonds investit en actions de préférence.\n\nStructure de ratchet :\nSi le TRI du fonds dépasse un seuil (ex. 15%), le management reçoit un % croissant de la plus-value au-delà de ce seuil. Plus le TRI est élevé, plus le management est récompensé de façon disproportionnée.\n\nExemple simplifié :\nFonds investit 100 en equity préférentiel. Management investit 5. Si l'EV à la sortie est de 300, le fonds récupère d'abord son 100 + rendement préférentiel. Le solde donne potentiellement 15-20% au management.\n\nObjectif : mobiliser pleinement le management pour maximiser la valeur de sortie."
-  }
+  },
+
+  // ─── EDGE TECHNICAL - Nouvelles questions ────────────────────────────────────
+
+  {
+    id: "edge_001", cat: "M&A", difficulty: "fondamental",
+    q: "Quel est l'objectif d'un pitch book dans un processus sell-side ? Quel contenu ?",
+    a: "Objectif : convaincre l'entreprise vendeuse de confier le mandat de vente à la banque.\n\nContenu type :\n- Présentation de la banque : track record, deals similaires réalisés\n- Analyse du marché et positionnement de la cible\n- Valorisation préliminaire : multiples de transactions comparables, DCF\n- Stratégie de vente : processus recommandé, identification des acheteurs potentiels\n- Structure du deal et recommandations\n\nLe pitch book est le document de compétition entre banques pour obtenir le mandat. Il doit démontrer une compréhension fine du secteur et une valorisation crédible dès cette étape."
+  },
+  {
+    id: "edge_002", cat: "M&A", difficulty: "intermédiaire",
+    q: "Quelle est la différence entre un teaser et un Information Memorandum (IM) en termes d'objectif ?",
+    a: "Teaser :\nBrève présentation anonyme de l'entreprise (secteur, CA, rentabilité). Met en avant les points forts (croissance, position concurrentielle, synergies potentielles) et l'opportunité d'investissement (raison de la vente, potentiel de développement).\nObjectif : inciter l'acheteur à signer un NDA pour recevoir l'IM.\n\nInformation Memorandum :\nObjectif : donner aux acheteurs potentiels une vue détaillée de l'entreprise pour qu'ils puissent formuler une offre indicative.\nContenu : présentation détaillée (historique, management, business model), analyse financière (P&L, bilan, cash flows, KPIs), perspectives de croissance (business plan), risques et opportunités, détails du process de vente et instructions pour les offres."
+  },
+  {
+    id: "edge_003", cat: "Accounting", difficulty: "fondamental",
+    q: "Décrivez la structure du compte de résultat (Income Statement) du CA au résultat net.",
+    a: "Sales (Chiffre d'affaires)\n- COGS (Cost of Goods Sold) : coûts directement liés à la production\n= Gross Profit (Marge brute)\n- SG&A (Selling, General & Administrative) : coûts indirects (marketing, administration)\n= EBITDA\n- D&A (Depreciation & Amortization) : pour actifs tangibles et intangibles\n= EBIT\n- Interests (frais financiers)\n= EBT (Earnings Before Tax)\n- Tax\n= Net Income\n\nLe compte de résultat est comme une vidéo de l'entreprise : il montre les revenus et dépenses sur une période, contrairement au bilan qui est une photo à un instant donné."
+  },
+  {
+    id: "edge_004", cat: "Accounting", difficulty: "intermédiaire",
+    q: "Pourquoi ajoute-t-on la D&A dans le cash flow statement ? Et pourquoi soustrait-on le gain net sur cession d'actifs ?",
+    a: "D&A (Depreciation & Amortization) :\nC'est une charge non-cash. Si une voiture perd 1000 de valeur par an dans la comptabilité, ce n'est pas une sortie de cash réelle. On l'ajoute donc dans le cash flow statement pour annuler son impact négatif sur le résultat net et refléter le cash réellement généré.\n\nGain net sur cession d'actifs :\nSi on vend un actif valant 50 (valeur comptable) pour 200, le cash entrant est 200, mais le résultat net n'augmente que de 150 (200 - 50, la plus-value). Pour ne pas compter ce gain deux fois (une fois dans le résultat net, une fois dans le cash flow d'investissement où apparaît le produit de cession total), on le soustrait du cash flow opérationnel."
+  },
+  {
+    id: "edge_005", cat: "Accounting", difficulty: "fondamental",
+    q: "Comment sont organisés l'actif et le passif du bilan ? Quelle logique de classement ?",
+    a: "Actif (Asset side) :\nClassé par liquidité, du moins liquide au plus liquide. On part des immobilisations (peu liquides) pour aller vers la trésorerie (la plus liquide), en passant par les stocks et créances.\n\nPassif (Liability side) :\nClassé par séniorité, c'est-à-dire par ordre de priorité de remboursement en cas de faillite. Les capitaux propres (actionnaires) sont remboursés en dernier ; les dettes (créanciers) sont remboursées en premier.\n\nGoodwill : différence entre le prix payé pour une entreprise et sa valeur comptable (book value). C'est essentiellement la prime payée par l'acquéreur."
+  },
+  {
+    id: "edge_006", cat: "Valuation", difficulty: "intermédiaire",
+    q: "Pourquoi dit-on que EV = Capital Investi ? Donnez la formule complète.",
+    a: "L'EV représente le capital total investi dans l'entreprise par tous les apporteurs de fonds (actionnaires et créanciers), indépendamment de la répartition entre eux.\n\nFormule :\nEV = Equity Value (capital social, réserves, résultat net) + Intérêts minoritaires + Dette nette\n\nDette nette = Dette financière CT + Dette financière LT - Trésorerie\n\nPoint important : les dettes fournisseurs (AP, Accounts Payable) ne sont PAS de la dette financière, donc elles ne rentrent jamais dans le calcul de la dette nette. Seules les dettes portant intérêt comptent."
+  },
+  {
+    id: "edge_007", cat: "Accounting", difficulty: "intermédiaire",
+    q: "Quels sont les trois liens principaux entre les trois états financiers ?",
+    a: "Premier lien (IS -> CFS) :\nLe résultat net est la dernière ligne du compte de résultat ET la première ligne du cash flow statement (point de départ du CFO).\n\nDeuxième lien (IS -> BS) :\nLe résultat net du compte de résultat vient alimenter les capitaux propres du bilan (via les réserves / résultat de l'exercice).\n\nTroisième lien (CFS -> BS) :\nLa somme des flux opérationnels, d'investissement et de financement du cash flow statement donne la trésorerie de clôture (Ending Cash), qui apparaît directement dans la section trésorerie de l'actif du bilan.\n\nCes trois liens garantissent la cohérence (l'équilibre) entre les trois documents : toute variation dans l'un se répercute mécaniquement sur les autres."
+  },
+  {
+    id: "edge_008", cat: "Accounting", difficulty: "avancé",
+    q: "Quelle est la différence entre la Full Consolidation et la Equity Method ? Donnez un exemple.",
+    a: "Full Consolidation (Intégration globale) :\nUtilisée quand l'entreprise mère détient plus de 50% des droits de vote (contrôle). Toutes les lignes de l'actif et du passif des deux sociétés sont consolidées à 100%. On fait ensuite ressortir les intérêts minoritaires (la part que la mère NE détient PAS dans la filiale).\n\nExemple : A détient 90% de B. On consolide 100% des actifs/passifs de B, puis on déduit 10% (les minoritaires) au niveau des capitaux propres ET du résultat net de B.\n\nEquity Method (Mise en équivalence) :\nUtilisée quand l'entreprise a une influence significative (généralement >20% des droits de vote) mais pas le contrôle. On ne consolide qu'une quote-part du résultat net et des capitaux propres de la filiale (appelée \"associate\", la part que la mère détient).\n\nExemple : A détient 20% de B. A intègre 20% du résultat net de B dans ses propres comptes, sans consolider ligne par ligne l'actif et le passif de B."
+  },
+  {
+    id: "edge_009", cat: "Valuation", difficulty: "fondamental",
+    q: "Selon le principe de l'Edge, qu'est-ce que la valorisation, fondamentalement ? Trois idées clés.",
+    a: "1. La valorisation est par nature imprécise. Il est plus juste de penser en termes de fourchette de valeurs qu'en termes de valeur unique correcte.\n\n2. La valorisation regarde vers l'avenir, pas vers le passé. Le passé ne sert que de guide pour anticiper le futur.\n\n3. La valorisation n'est pas qu'un jeu de chiffres. On ne peut pas valoriser correctement une entreprise sans en comprendre le business et son environnement. Même en sell-side, il faut penser comme un investisseur et utiliser le bon sens. Il y a beaucoup plus derrière les chiffres, et c'est ce qui rend ce métier intéressant.\n\nConclusion : la valorisation est un art, pas une science exacte."
+  },
+  {
+    id: "edge_010", cat: "Valuation", difficulty: "intermédiaire",
+    q: "Donnez la formule complète et détaillée du Bridge EV vers Equity Value, avec tous les éléments et où les trouver.",
+    a: "Formule :\nEV = Equity Value + Dette nette + Intérêts minoritaires - Participations dans les sociétés associées + Pensions x (1-Taux d'impôt) + Provisions + Dette de location (capital lease et operating lease)\n\nOù trouver chaque élément :\n- Dette nette : Dette financière LT et CT - Trésorerie et équivalents (au passif et actif)\n- Intérêts minoritaires : au passif du bilan\n- Participations dans les associées : à l'actif du bilan\n- Pensions : au passif du bilan\n\nPourquoi on AJOUTE les intérêts minoritaires : en intégration globale, on consolide les actifs et passifs des deux sociétés à 100%, donc l'EV doit refléter la valeur totale, y compris la part des minoritaires.\n\nPourquoi on SOUSTRAIT les participations dans les associées : ce n'est pas une source de financement de l'activité opérationnelle consolidée, mais un investissement séparé."
+  },
+  {
+    id: "edge_011", cat: "Valuation", difficulty: "fondamental",
+    q: "Quelles sont les deux familles de méthodes de valorisation ? Donnez des exemples pour chacune.",
+    a: "Famille Analogique (Analogical) :\nRepose sur la comparaison avec d'autres entreprises ou transactions.\n- Trading Comparables : multiples de sociétés cotées comparables (pairs sur le marché)\n- Transaction Comparables : multiples issus de transactions M&A réelles similaires\n\nFamille Intrinsèque (Intrinsic) :\nRepose sur les fondamentaux propres de l'entreprise.\n- DCF : se concentre sur la génération de free cash flow future de l'entreprise\n\nAutres méthodes complémentaires : SOTP (sum of the parts) pour les conglomérats, méthode de liquidation pour les sociétés en difficulté, et le LBO qui donne le prix maximum qu'un investisseur financier accepterait de payer (donne généralement la valeur la plus basse, le \"floor\")."
+  },
+  {
+    id: "edge_012", cat: "Valuation", difficulty: "intermédiaire",
+    q: "Pourquoi les trading comparables donnent-ils généralement la valorisation la plus basse des trois méthodes principales ?",
+    a: "Les trading comparables reflètent la valeur de marché, déterminée par l'offre et la demande, c'est-à-dire le prix qu'une personne ordinaire paierait pour acheter une action sur le marché.\n\nIls ne prennent pas en compte la prime de contrôle qu'un acquéreur stratégique est prêt à payer en plus pour obtenir le contrôle de l'entreprise.\n\nIllustration : Amazon, s'il voulait acquérir Google, paierait plus par action qu'un particulier achetant quelques titres en bourse, car Amazon valorise le contrôle, les synergies et la stratégie, pas seulement le titre.\n\nDonc trading comps = valorisation minoritaire = généralement la plus basse des trois grandes méthodes (avec DCF et transaction comps)."
+  },
+  {
+    id: "edge_013", cat: "Valuation", difficulty: "avancé",
+    q: "Qu'est-ce que la méthode SOTP (Sum of the Parts) ? Quand l'utilise-t-on ?",
+    a: "Le SOTP consiste à valoriser séparément chaque division (Business Unit) d'un grand conglomérat, puis à additionner les valorisations pour obtenir l'EV totale.\n\nQuand l'utiliser ?\nPour les grands conglomérats diversifiés (exemple : General Electric avec ses divisions énergie, aviation, santé) où il est difficile de trouver un comparable global pertinent puisque aucune entreprise comparable n'a exactement le même mix d'activités.\n\nMéthode :\n1. Découper l'entreprise en Business Units homogènes\n2. Valoriser chaque BU séparément avec les comparables sectoriels appropriés (multiples énergie, multiples aviation, multiples santé...)\n3. Additionner les EV de chaque BU pour obtenir l'EV totale du groupe\n4. Déduire les coûts de holding non alloués et la dette nette du groupe pour obtenir l'Equity Value"
+  },
+  {
+    id: "edge_014", cat: "DCF", difficulty: "fondamental",
+    q: "Pourquoi utilise-t-on l'EBIT x (1-tax) plutôt que le résultat net pour calculer le Free Cash Flow dans un DCF ?",
+    a: "Parce qu'on cherche le Free Cash Flow to the Firm (FCFF), c'est-à-dire tout le cash généré par l'entreprise pour TOUS les apporteurs de capitaux (actionnaires ET créanciers).\n\nSi on déduisait les intérêts (Interest) de l'EBIT pour obtenir l'EBT puis le résultat net, on obtiendrait le Free Cash Flow to Equity (FCFE), qui ne revient qu'aux actionnaires (car les intérêts ont déjà rémunéré les créanciers).\n\nEn partant de l'EBIT x (1-tax), on conserve un flux qui est disponible pour les deux catégories d'apporteurs de capitaux, avant toute décision de financement.\n\nFormule complète du FCFF :\nFCF = EBIT x (1-tax) + D&A - Variation du BFR - Capex\n\nOn ajoute la D&A (charge non-cash) et on soustrait le Capex (sortie de cash réelle pour investir)."
+  },
+  {
+    id: "edge_015", cat: "WACC", difficulty: "intermédiaire",
+    q: "Pourquoi faut-il désendetter (unlever) puis ré-endetter (relever) le bêta des comparables ?",
+    a: "Chaque entreprise comparable a une structure de capital différente. Par exemple, parmi British Telecom, Vodafone et Orange, certaines ont pu faire des acquisitions qui ont échoué et se retrouvent avec un fort niveau de dette dans leur bilan, ce qui rend leur bêta observé (levered beta) non comparable directement.\n\nÉtapes :\n1. Désendetter le bêta de chaque comparable : on retire l'effet de sa propre structure financière, pour obtenir un bêta \"propre\" qui reflète uniquement le risque opérationnel du secteur.\n2. Calculer la médiane/moyenne des bêtas désendettés du secteur.\n3. Ré-endetter ce bêta sectoriel avec la structure financière cible (celle de l'entreprise qu'on valorise).\n\nL'idée est de mettre tous les bêtas comparables \"au même niveau\" avant de les comparer, puis d'appliquer la structure financière propre à la société cible."
+  },
+  {
+    id: "edge_016", cat: "WACC", difficulty: "intermédiaire",
+    q: "Dans quels secteurs trouve-t-on des bêtas négatifs ? Donnez deux exemples concrets.",
+    a: "Un bêta négatif signifie que lorsque le marché monte, l'actif baisse (et inversement).\n\nDeux exemples concrets :\n\n1. Les métaux précieux (Gold/Or) : en période de crise, quand les marchés actions chutent, les investisseurs se réfugient vers l'or, dont le prix monte. C'est une valeur refuge classique.\n\n2. L'activité de Restructuring en banque d'affaires : quand tout va mal en M&A et en banque d'investissement classique pendant une crise, l'activité de restructuring (conseil aux entreprises en difficulté) connaît au contraire une forte hausse d'activité. C'est contracyclique par nature."
+  },
+  {
+    id: "edge_017", cat: "DCF", difficulty: "intermédiaire",
+    q: "Comment passer de l'EV obtenue par DCF au prix cible par action (target price per share) ?",
+    a: "Étapes :\n\n1. Réaliser l'analyse DCF pour obtenir l'EV (somme des FCF actualisés + valeur terminale actualisée)\n\n2. Utiliser la formule du Bridge à l'envers. On sait que :\nEV = Equity Value + Dette nette + Intérêts minoritaires - Associés + Pensions x (1-t)\n\n3. Isoler l'Equity Value en inversant tous les signes :\nEquity Value = EV - Dette nette - Intérêts minoritaires + Associés - Pensions x (1-t)\n\n4. Diviser l'Equity Value obtenue par le nombre d'actions diluées :\nPrix cible par action = Equity Value / Nombre d'actions diluées\n\nCe prix cible peut ensuite être comparé au cours actuel pour déterminer un potentiel de hausse (upside) ou de baisse (downside)."
+  },
+  {
+    id: "edge_018", cat: "Valuation", difficulty: "avancé",
+    q: "Quels exemples de multiples sectoriels spécifiques connaissez-vous, au-delà de l'EV/EBITDA classique ?",
+    a: "Plusieurs secteurs utilisent des multiples spécifiques adaptés à leur modèle économique :\n\nSocial media / Tech : EV/Subscribers (valeur par abonné), utile quand l'entreprise n'est pas encore profitable mais a une base d'utilisateurs importante.\n\nOil & Gas : EV/2P, EV/3P, EV/1P, qui reflètent la valeur par rapport aux réserves prouvées (1P), probables (2P) ou possibles (3P) de pétrole et de gaz.\n\nCompagnies aériennes : EV/EBITDAR (EBITDA avant loyers, Rent), car les avions sont souvent en location plutôt qu'en propriété, et ce multiple neutralise l'effet de cette structure de financement.\n\nTélécoms : EV/(EBITDA - Capex), car le secteur est très intensif en capital (infrastructures réseau), donc le simple EV/EBITDA surestimerait la valeur sans tenir compte des investissements récurrents massifs nécessaires."
+  },
+  {
+    id: "edge_019", cat: "Valuation", difficulty: "avancé",
+    q: "Pourquoi ne peut-on pas calculer le multiple EV/Résultat Net ? Quelle incohérence cela pose-t-il ?",
+    a: "Il faut une cohérence entre le numérateur et le dénominateur d'un multiple : les deux doivent rémunérer la même catégorie d'apporteurs de capitaux.\n\nEV (numérateur) : représente la valeur totale de l'actif, financée par TOUS les apporteurs de capitaux (actionnaires ET créanciers). C'est ce qu'on retrouve dans la formule EV = Equity Value + Dette nette + Minoritaires - Associés + Pensions x (1-t).\n\nRésultat Net (dénominateur) : c'est un flux qui ne revient QU'aux actionnaires, car les intérêts (rémunération des créanciers) ont déjà été déduits pour l'obtenir.\n\nIl y a donc une incohérence : on comparerait une valeur \"tous apporteurs de capitaux\" à un flux \"actionnaires uniquement\". C'est pourquoi pour le résultat net, on utilise l'Equity Value (PER = Equity Value / Résultat Net), et pour le CA, l'EBITDA, l'EBIT, on utilise l'EV."
+  },
+  {
+    id: "edge_020", cat: "Valuation", difficulty: "intermédiaire",
+    q: "Pourquoi utilise-t-on des estimations (estimates) plutôt que des données historiques pour les trading comparables ?",
+    a: "Les trading comparables visent à évaluer la valeur de marché d'une entreprise, c'est-à-dire le prix déterminé par l'offre et la demande sur le marché boursier.\n\nLe prix d'une action reflète non seulement la valeur présente de l'entreprise, mais aussi son potentiel futur. Par exemple, une action Google qui se négocie à 100 dollars ne reflète pas seulement la valeur actuelle de Google, mais aussi les attentes de croissance future. Quand on achète une action, on anticipe que sa valeur va augmenter.\n\nC'est pourquoi on utilise des estimations financières (CA, EBITDA prévisionnels) plutôt que des chiffres historiques.\n\nOù trouver ces estimations ?\nPas dans les rapports annuels (qui contiennent des chiffres réels passés, sans estimation). On utilise Bloomberg et FactSet, qui agrègent le consensus de plusieurs brokers de différentes banques."
+  },
+  {
+    id: "edge_021", cat: "Valuation", difficulty: "intermédiaire",
+    q: "Quelle est la différence fondamentale entre les données utilisées en Trading Comps et en Transaction Comps ?",
+    a: "Trading Comps : on utilise des données ESTIMÉES (estimates), car on cherche à refléter la valeur de marché qui intègre les anticipations futures.\n\nTransaction Comps : on utilise des données LTM (Last Twelve Months), c'est-à-dire les 12 derniers mois de résultats réels de la cible au moment de la transaction. Pas d'estimations ici, ce sont des chiffres effectifs.\n\nOù trouver les transactions passées ?\nMergerMarket (logiciel très utilisé en stage), Capital IQ, et parfois les rapports de brokers ou de cabinets de conseil.\n\nFacteurs qui influencent le prix d'une transaction : nombre d'acheteurs en compétition, synergies (variables selon l'acquéreur), disponibilité de cibles alternatives, intensité de la concurrence entre investisseurs, valeurs DCF, comparables trading et transaction, et éléments non liés au prix (gouvernance, structure de la transaction)."
+  },
+  {
+    id: "edge_022", cat: "LBO", difficulty: "fondamental",
+    q: "Décrivez le cycle complet d'un LBO du point de vue des LP et GP : fundraising, investissement, exit.",
+    a: "Cycle complet :\n\n1. Fundraising : les GP (General Partners, l'équipe de gestion du fonds) lèvent des capitaux auprès des LP (Limited Partners, les investisseurs : fonds de pension, family offices, assureurs).\n\n2. Investissement : le fonds identifie la cible LBO idéale et investit (avec un fort effet de levier de dette).\n\n3. Exit et cash-out : après 4-6 ans typiquement, le fonds revend sa participation (trade sale, secondary buyout, IPO) et distribue le cash généré.\n\nOrdre de paiement à la sortie (cascade de distribution) :\n1. D'abord les LP, qui récupèrent leur capital plus un rendement préférentiel (hurdle rate, généralement 7-8% en Europe).\n2. Ensuite les GP perçoivent leur carried interest (part de la plus-value au-delà du hurdle, généralement 20%), qui rémunère l'équipe de gestion (MD et associés)."
+  },
+  {
+    id: "edge_023", cat: "LBO", difficulty: "intermédiaire",
+    q: "Quels sont les quatre leviers de création de valeur dans un LBO selon la nomenclature française (financier, juridique, fiscal, opérationnel) ?",
+    a: "1. Levier Financier : augmentation de la rentabilité des fonds propres (equity) grâce à l'endettement, à condition que la rentabilité économique de la cible soit supérieure au coût de la dette. C'est l'effet de levier classique.\n\n2. Levier Juridique : contrôle de la cible avec un apport limité en capitaux propres, grâce à une structure en cascade de holdings (le fonds contrôle un holding qui contrôle un autre holding qui détient la cible, avec un apport en cash minoritaire à chaque étage mais un contrôle total).\n\n3. Levier Fiscal : utilisation du régime mère-fille, qui permet une exonération d'impôt sur les dividendes remontés de la cible vers la holding, optimisant le flux de cash disponible pour rembourser la dette.\n\n4. Levier Opérationnel : amélioration de la performance opérationnelle de la cible pendant la période de détention (croissance du CA, amélioration des marges, build-up)."
+  },
+  {
+    id: "edge_024", cat: "LBO", difficulty: "intermédiaire",
+    q: "Pourquoi un LBO fonctionne-t-il mieux sur un marché peu risqué et mature ? Quel TRI minimum est généralement attendu ?",
+    a: "Pourquoi un marché peu risqué et mature :\nL'entreprise cible porte déjà un risque élevé du fait de son endettement massif. Si on ajoute à cela un marché risqué ou volatile (cyclique, technologique en rupture, géopolitique instable), le risque total devient excessif pour les prêteurs et les investisseurs. Un marché mature et stable permet à la cible de générer des flux de trésorerie prévisibles, nécessaires pour rembourser la dette et maximiser la rentabilité.\n\nTRI minimum attendu :\nLes investisseurs (LP) exigent généralement un TRI minimum de 15%, qui constitue un critère obligatoire pour rémunérer correctement leur prise de risque sur un horizon de 4-6 ans.\n\nGénération de cash : il est crucial que la cible génère des flux de trésorerie importants et récurrents, car ces flux servent à la fois à payer les intérêts et le principal de la dette de la holding, et à terme à rémunérer les LP lors de l'exit."
+  },
+
 ];
 
 export const CATEGORIES = [...new Set(QUESTIONS.map(q => q.cat))];
