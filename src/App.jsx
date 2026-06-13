@@ -54,7 +54,6 @@ function Sidebar({ active, setActive }) {
       </nav>
       <div className="sidebar-footer">
         <div className="footer-count">{QUESTIONS.length} questions</div>
-        <div className="footer-sub">issues de tes PDFs</div>
       </div>
     </div>
   )
